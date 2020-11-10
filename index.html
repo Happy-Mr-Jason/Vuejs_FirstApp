@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Todo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Todo App</h1>
+        <input type="text" v-model="inputText" v-on:keyup.enter="addItem">
+        <button v-on:click="addItem">add</button>
+        <div>
+            <ul>
+                <li v-for="(item, index) in todoItems">
+                    {{ item }} <button v-on:click="removeItem(item, index)">remove</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            created: function () {
+                this.fetchItems();
+            },
+            el: '#app',
+            data: {
+                inputText: '',
+                todoItems: []
+            },
+            methods: {
+                addItem: function (event) {
+                    var value = this.inputText;
+                    localStorage.setItem('inputText', value);
+                    this.inputText = '';
+                    // axios.post('Address', this.inputText);
+                    // this.fetchItems();
+                    this.todoItems.push(value);
+                },
+                fetchItems: function () {
+                    var value = localStorage.getItem('inputText');
+                    this.todoItems.push(value);
+                },
+                removeItem: function (todoItem, index) {
+                    console.log(index, todoItem);
+                    this.todoItems.splice(index, 1);
+                    // localStorage.removeItem(index);
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
