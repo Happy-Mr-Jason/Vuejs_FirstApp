@@ -5,23 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intro to Vue 2</title>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-
+  
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
   <div class="nav-bar"></div>
-
+  
   <div id="app">
     <div class="cart">
       <p>Cart({{ cart.length }})</p>
     </div>
-
+    
     <product :premium="premium" @add-to-cart="updateCart"></product>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="js/main.js"></script>
 </body>
 
