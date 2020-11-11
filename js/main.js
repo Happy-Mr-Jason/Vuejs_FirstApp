@@ -67,13 +67,13 @@ Vue.component('product', {
       variants: [{
           variantId: 2234,
           variantColor: "green",
-          variantImage: '../img/vmSocks-green-onWhite.jpg',
+          variantImage: 'img/vmSocks-green-onWhite.jpg',
           variantQuantity: 10,
         },
         {
           variantId: 2235,
           variantColor: "blue",
-          variantImage: '../img/vmSocks-blue-onWhite.jpg',
+          variantImage: 'img/vmSocks-blue-onWhite.jpg',
           variantQuantity: 0
         }
       ],
