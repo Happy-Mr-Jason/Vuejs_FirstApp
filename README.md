@@ -4,4 +4,4 @@ __**Intro to Vue 2**__
 
 First Course of Vue Mastery Course
 
-refer to [Mastery.com](https://www.vuemastery.com/courses-path/beginner)
+refer to [Vue Mastery](https://www.vuemastery.com/courses-path/beginner)
